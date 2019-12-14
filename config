@@ -125,6 +125,8 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 assign [class=".*(F|f)irefox.*"] $workspace2
 assign [class="Google-chrome"] $workspace2
 assign [class=".*(F|f)irefox.*"] $workspace2
+assign [class="jetbrains-datagrip"] $workspace4
+assign [class="jetbrains-phpstorm"] $workspace5
 assign [class="Slack"] $workspace9
 assign [class="TelegramDesktop"] $workspace9
 
