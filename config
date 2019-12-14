@@ -16,10 +16,9 @@ set $mod Mod4
 font pango:monospace, FontAwesome 12
 exec xrandr --output eDP-1 --mode  2048x1152
 exec --no-startup-id feh --bg-fill ~/Pictures/bgc/2XnaTLP.jpg
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
 
+#startup commands
+exec_always /usr/bin/nm-applet
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -127,6 +126,7 @@ assign [class=".*(F|f)irefox.*"] $workspace2
 assign [class="Google-chrome"] $workspace2
 assign [class=".*(F|f)irefox.*"] $workspace2
 assign [class="Slack"] $workspace9
+assign [class="TelegramDesktop"] $workspace9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
