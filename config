@@ -17,8 +17,12 @@ font pango:monospace, FontAwesome 12
 exec xrandr --output eDP-1 --mode  2048x1152
 exec --no-startup-id feh --bg-fill ~/Pictures/bgc/2XnaTLP.jpg
 
+# Lock screen
+bindsym $mod+l exec i3lock -c eb4034
+
 #startup commands
 exec_always /usr/bin/nm-applet
+exec /usr/bin/goldendict
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -45,7 +49,7 @@ bindsym $mod+d exec dmenu_run
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
+#bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
