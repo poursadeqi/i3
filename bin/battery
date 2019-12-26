@@ -6,7 +6,11 @@ echo $charge%
 echo $charge%
 if [[ $status == Dis* ]];
 then
-  if [[ $charge -lt 20 ]];
+  if [[ $charge -lt 5 ]];
+  then
+    spd-say -i '-90' 'ebrahim low battery'
+    notify-send -u critical  'LOW BATTERY' 
+  elif [[ $charge -lt 20 ]];
   then
     echo "#FF0000"
   elif [[ $charge -lt 40 ]];
@@ -18,6 +22,7 @@ then
   elif [[ $charge -lt 85 ]];
   then
     echo "#A8FF00"
+    spd-say 'low battery' 
   fi
 else
   echo "#90CAF9"
