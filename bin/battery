@@ -22,7 +22,6 @@ then
   elif [[ $charge -lt 85 ]];
   then
     echo "#A8FF00"
-    spd-say 'low battery' 
   fi
 else
   echo "#90CAF9"
