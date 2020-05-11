@@ -106,7 +106,7 @@ bindsym $mod+a focus parent
 # switch to workspace
 set $workspace1 "1: "
 set $workspace2 "2: "
-set $workspace4 "3"
+set $workspace3 "3: N"
 set $workspace4 "4: "
 set $workspace5 "5: "
 set $workspace6 "6"
@@ -117,7 +117,7 @@ set $workspace10 "10: "
 set $binfolder "/home/ebrahim/.config/i3/bin"
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace number 3
+bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace number 4
 bindsym $mod+5 workspace number 5
 bindsym $mod+6 workspace number 6
@@ -129,7 +129,7 @@ bindsym $mod+0 workspace $workspace10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace number 4
 bindsym $mod+Shift+5 move container to workspace number 5
 bindsym $mod+Shift+6 move container to workspace number 6
@@ -138,13 +138,18 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
+
 assign [class=".*(F|f)irefox.*"] $workspace2
 assign [class="Google-chrome"] $workspace2
 assign [class=".*(F|f)irefox.*"] $workspace2
+assign [class="jetbrains-webstorm"] $workspace3
 assign [class="jetbrains-datagrip"] $workspace4
 assign [class="jetbrains-phpstorm"] $workspace5
 assign [class="jetbrains-pycharm"] $workspace7
-assign [class="Code"] $workspace5
+assign [class="Code"] $workspace7
 assign [class="Slack"] $workspace9
 assign [class="TelegramDesktop"] $workspace9
 assign [class="VirtualBox Manager"] $workspace10
