@@ -6,9 +6,9 @@ echo $charge%
 echo $charge%
 if [[ $status == Dis* ]];
 then
-  if [[ $charge -lt 5 ]];
+  if [[ $charge -lt 15 ]];
   then
-    spd-say -i '-90' 'ebrahim low battery'
+    spd-say -i '-90' 'ebrhim plug me a charger, I am dying, charger chargerrr, I need a charger'
     notify-send -u critical  'LOW BATTERY' 
   elif [[ $charge -lt 20 ]];
   then

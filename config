@@ -16,6 +16,8 @@ set $mod Mod4
 font pango:monospace, FontAwesome 12
 exec xrandr --output eDP-1 --mode  2048x1152
 exec --no-startup-id feh --bg-fill ~/Pictures/bgc/2XnaTLP.jpg
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start -d --login
+exec diodon
 
 # Lock screen
  bindsym $mod+l exec i3lock -c eb4034
